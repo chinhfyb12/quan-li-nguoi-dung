@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+#root > div > div:nth-child(3) > div.col-3 > div > div > form > input {
+  margin-bottom: 10px;
+}
+table {
+  border: 1px solid rgb(214 214 214);
+}
+th, td {
+  border: none !important;
+}
+#root > div > div:nth-child(2) > div.col-3 > div > label {
+  width: 110px;
+}
