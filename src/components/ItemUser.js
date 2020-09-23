@@ -11,7 +11,7 @@ class ItemUser extends Component {
         <td>{ this.props.permission === 0 ? 'Người quản trị' : this.props.permission === 1 ? 'Người kiểm duyệt' : 'Người sử dụng' }</td>
         <td>
           <div className="form-group btn-group m-0">
-            <div className="btn btn-info" onClick={() => this.props.changeStatusEdit()}>Sửa</div>
+            <div className="btn btn-info" onClick={() => this.props.changeStatusEdit(this.props.user)}>Sửa</div>
             <div className="btn btn-warning" onClick={ () => this.props.deleteUser(this.props.id) }>Xóa</div>
           </div>
         </td>
@@ -22,7 +22,7 @@ class ItemUser extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        changeStatusEdit:() => dispatch({type: "CHANGE_STATUS_EDIT"}),
+        changeStatusEdit:(user) => dispatch({type: "CHANGE_STATUS_EDIT_AND_GET_USER", user}),
         deleteUser: (user) => dispatch({type: "DELETE_USER", user})
     }
 }

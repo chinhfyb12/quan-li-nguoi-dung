@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddUser from './components/AddUser';
-import RangeUser from './components/RangeUser';
 import Search from './components/Search';
 import TableUser from './components/TableUser';
 import EditUser from './components/EditUser';
@@ -10,13 +9,13 @@ import {connect} from 'react-redux';
 class App extends Component {
 
   renderAddUserForm = () => {
-    let {statusAdd} = this.props.statusAdd;
+    let {statusAdd} = this.props;
     if(statusAdd) {
       return <AddUser />
     }
   }
   renderButtonAddUser = () => {
-    let {statusAdd} = this.props.statusAdd;
+    let {statusAdd} = this.props;
     if(statusAdd) {
       return <div className="btn btn-danger" onClick={() => this.props.changeStatusAdd()}>Hủy thêm</div>
     } else {
@@ -25,9 +24,7 @@ class App extends Component {
   }
 
   renderEditUserForm = () => {
-    let {statusEdit} = this.props.statusEdit;
-    // let {statusAdd} = this.props.statusAdd;
-    if(statusEdit) {
+    if(this.props.statusEdit) {
       return <EditUser />
     }
   }
@@ -42,15 +39,14 @@ class App extends Component {
         </div>
         <div className="row mb-4">
           <Search />
-          <RangeUser />
           <div className="col-3">
             { this.renderButtonAddUser() }            
           </div>
         </div>
         <div className="row">
           <TableUser />
-          { this.renderAddUserForm() }
           { this.renderEditUserForm() }
+          { this.renderAddUserForm() }
         </div>
       </div>
     )
@@ -60,8 +56,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-      statusAdd: state.statusAdd,
-      statusEdit: state.statusEdit
+      statusAdd: state.statusAdd.statusAdd,
+      statusEdit: state.editUser.statusEdit
   }
 }
 const mapDispatchToProps = dispatch => {

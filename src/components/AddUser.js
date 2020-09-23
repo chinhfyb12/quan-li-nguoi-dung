@@ -6,7 +6,9 @@ class AddUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            permission: '2'
+            userName: '',
+            phoneNum: '',
+            permission: ''
         }
     }
     getInputData = e => {
@@ -15,7 +17,15 @@ class AddUser extends Component {
         })
     }
     pushDataUser = (data) => {
+        if(data.permission === '') {
+            data.permission = '2'
+        }
         this.props.addUserData(data);
+        this.setState({
+            userName: '',
+            phoneNum: '',
+            permission: ''
+        })
     }
 
     render() {
