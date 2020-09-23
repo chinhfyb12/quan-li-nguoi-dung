@@ -11,7 +11,7 @@ class EditUser extends Component {
             permission: null
         }
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.setState({
             id: this.props.dataUserEdit.key,
             userName: this.props.dataUserEdit.userName,

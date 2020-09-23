@@ -29,7 +29,7 @@ class TableUser extends Component {
         return str;
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         dataUserFirebase.on('value', datas => {
             let arrayUser = []
             datas.forEach(data => {

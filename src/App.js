@@ -5,6 +5,7 @@ import Search from './components/Search';
 import TableUser from './components/TableUser';
 import EditUser from './components/EditUser';
 import {connect} from 'react-redux';
+import AleartNoti from './AleartNoti';
 
 class App extends Component {
 
@@ -32,6 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <AleartNoti />
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
             <h3 className="display-4 text-center">Quản lí người dùng</h3>
