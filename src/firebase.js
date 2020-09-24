@@ -1,14 +1,14 @@
 import * as firebase from 'firebase';
 var firebaseConfig = {
-    apiKey: "AIzaSyDSRS7IL-T01BhREyBgHg-mch0zj2j44xw",
-    authDomain: "manageuser-b8484.firebaseapp.com",
-    databaseURL: "https://manageuser-b8484.firebaseio.com",
-    projectId: "manageuser-b8484",
-    storageBucket: "manageuser-b8484.appspot.com",
-    messagingSenderId: "136851858317",
-    appId: "1:136851858317:web:50526b8fe7695f752c93c4",
-    measurementId: "G-MRRZMCTNM8"
-  };
+  apiKey: "AIzaSyDP7oecy2ilflIGAxkvMHjTVXUjT7S9rv0",
+  authDomain: "manageuser1-55f96.firebaseapp.com",
+  databaseURL: "https://manageuser1-55f96.firebaseio.com",
+  projectId: "manageuser1-55f96",
+  storageBucket: "manageuser1-55f96.appspot.com",
+  messagingSenderId: "511146748000",
+  appId: "1:511146748000:web:f831f64b39939a952cfb05",
+  measurementId: "G-DN2E6PSB9N"
+};
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
